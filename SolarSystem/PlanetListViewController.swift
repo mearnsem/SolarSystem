@@ -9,12 +9,9 @@
 import UIKit
 
 class PlanetListViewController: UITableViewController {
-
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
     }
 
@@ -32,7 +29,7 @@ class PlanetListViewController: UITableViewController {
 
         cell.textLabel?.text = planet.name
         cell.detailTextLabel?.text = "Planet \(indexPath.row + 1)"
-//        cell.imageView?.image = UIImageView.
+        cell.imageView?.image = UIImage(named: planet.imageName)
 
         return cell
     }
@@ -40,11 +37,9 @@ class PlanetListViewController: UITableViewController {
     
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-//    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+    }
     
 
 }
