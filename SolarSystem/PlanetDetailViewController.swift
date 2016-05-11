@@ -18,12 +18,20 @@ class PlanetDetailViewController: UIViewController {
     var planet: Planet?
     
     func updateWithPlanet(planet: Planet) {
+        title = planet.name
+        diameterLabel.text = "Diameter is \(planet.diameter)"
+        dayLengthLabel.text = "Day length is \(planet.dayLength)"
+        distanceFromSunLabel.text = "\(planet.millionKMsFromSun) from the Sun"
+        planetImageView.image = UIImage(named: planet.imageName)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if let planet = planet {
+            updateWithPlanet(planet)
+        }
+        
     }
     
     
