@@ -29,6 +29,7 @@ class PlanetListViewController: UITableViewController {
 
         cell.textLabel?.text = planet.name
         cell.detailTextLabel?.text = "Planet \(indexPath.row + 1)"
+        cell.imageView?.contentMode = .ScaleAspectFill
         cell.imageView?.image = UIImage(named: planet.imageName)
 
         return cell

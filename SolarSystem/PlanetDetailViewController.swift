@@ -19,9 +19,9 @@ class PlanetDetailViewController: UIViewController {
     
     func updateWithPlanet(planet: Planet) {
         title = planet.name
-        diameterLabel.text = "Diameter is \(planet.diameter)"
-        dayLengthLabel.text = "Day length is \(planet.dayLength)"
-        distanceFromSunLabel.text = "\(planet.millionKMsFromSun) from the Sun"
+        diameterLabel.text = "\(planet.diameter) km"
+        dayLengthLabel.text = "\(planet.dayLength) hours"
+        distanceFromSunLabel.text = "\(planet.millionKMsFromSun) million km"
         planetImageView.image = UIImage(named: planet.imageName)
     }
     
